@@ -1,0 +1,66 @@
+@import "../../index.scss";
+
+.sidebar {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  width: 100%;
+  & > div {
+    margin-bottom: 5px;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  box-sizing: border-box;
+
+  @include desktop {
+    background-color: #f5f4f4 !important;
+    padding: 4px 13px 4px 4px !important;
+    flex: 0.3 !important;
+  }
+
+  @include tablet {
+    background-color: white;
+  }
+
+  @include phone {
+    background-color: white;
+  }
+}
+
+.mobile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomLine {
+  width: 100%;
+  border-top: 2px solid #7e7e7e;
+  background: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .text {
+    font-size: 14px;
+    color: rgb(61, 66, 71);
+    text-align: start;
+    line-height: 24px;
+    font-family: Helvetica;
+    margin: 0px;
+  }
+}

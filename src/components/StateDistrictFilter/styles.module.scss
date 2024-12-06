@@ -1,0 +1,145 @@
+@import "../../index.scss";
+
+.container {
+  background: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  padding: 20.96px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    border: 1px solid #7e7e7e !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  @include tablet {
+    border: none;
+    box-shadow: none;
+  }
+
+  @include phone {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+.CreateReportContainer {
+  @extend .container;
+
+  @include desktop {
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
+
+.filter-districts-view {
+  box-sizing: border-box;
+  padding: 6.5px 16px;
+  margin-top: 10.5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #f5f4f4;
+}
+
+.filter-aspirational-districts {
+  box-sizing: border-box;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rankingContainer {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+
+.selector {
+  cursor: pointer;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+
+  @include desktop {
+    background-color: transparent !important;
+    border-bottom: 2px solid #f5f4f4 !important;
+    margin-top: 0px !important;
+  }
+
+  @include tablet {
+    background-color: #f5f4f4;
+    border-bottom: none;
+    margin-top: 4px;
+  }
+
+  @include phone {
+    background-color: #f5f4f4;
+    border-bottom: none;
+    margin-top: 4px;
+  }
+
+  .input {
+    border: none;
+    outline: none;
+
+    @include desktop {
+      background-color: transparent !important;
+    }
+
+    @include tablet {
+      background-color: #f5f4f4;
+    }
+
+    @include phone {
+      background-color: #f5f4f4;
+    }
+  }
+}
+
+.focus {
+  border: 1px solid #a51c30 !important;
+}
+
+.addSelector {
+  box-sizing: border-box;
+  border: 1px dashed #a51c30;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  cursor: pointer;
+
+  .input {
+    border: none;
+    outline: none;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.addSelectorMobile {
+  box-sizing: border-box;
+  background: #eeeeee;
+  border: 1px dashed #3d4247;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  span {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 24px;
+    color: #5e6771;
+  }
+}

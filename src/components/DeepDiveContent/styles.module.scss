@@ -1,0 +1,50 @@
+@import "../../index.scss";
+
+.container {
+  display: flex;
+  height: calc(100% - 77px);
+  background-color: #e5e5e5;
+
+  @include desktop {
+    flex-direction: row !important;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.content {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  padding-top: 16px;
+  @include desktop {
+    flex: 0.7 !important;
+  }
+  @include phone {
+    padding-top: 0;
+  }
+}
+
+.loading {
+  opacity: 0.6;
+}
+
+.loader {
+  @include progressbar;
+}
+
+.referenceContainer {
+  padding: 0px 29px;
+  & > div {
+    border: none;
+  }
+}
+.indicatorsContainer {
+  padding: 0px 24px;
+}

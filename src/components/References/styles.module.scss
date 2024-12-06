@@ -1,0 +1,211 @@
+@import "../../index.scss";
+
+.colorIndicator {
+  display: flex;
+  height: fit-content;
+
+  @include phone {
+    width: 100%;
+  }
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    &.compare {
+      width: 30%;
+    }
+
+    &.deep_dive {
+      width: 40%;
+    }
+  }
+
+  div {
+    flex: 1;
+    position: relative;
+
+    .indicatorSigImproved {
+      @extend .indicator;
+      border-bottom-left-radius: 6px;
+      bottom: 0px;
+      position: absolute;
+      border-top-left-radius: 6px;
+      background-color: #2e7265;
+    }
+
+    .indicatorImproved {
+      @extend .indicator;
+      bottom: 0px;
+      position: absolute;
+      background-color: #6d9f95;
+    }
+
+    .indicatorWorsened {
+      @extend .indicator;
+      bottom: 0px;
+      position: absolute;
+      background-color: #e87d7f;
+    }
+
+    .indicatorSigWorsened {
+      @extend .indicator;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      background-color: #df4649;
+    }
+  }
+
+  .indicator {
+    margin-top: 5px;
+    height: 10px;
+    width: calc(100% - 0.5px);
+  }
+}
+
+.references {
+  background: #ffffff;
+  border: 1px solid #c3c9d0;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+
+  box-sizing: border-box;
+  gap: 20px;
+
+  @include phone {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+  }
+
+  .indicator-range {
+    background: #ffffff;
+    flex: 4;
+    display: flex;
+    gap: 8px;
+
+    p {
+      font-weight: 300;
+      font-size: 9px;
+      line-height: 10px;
+      display: flex;
+      align-items: center;
+      text-align: right;
+      letter-spacing: 0.04em;
+      color: #3d4247;
+    }
+  }
+
+  .items {
+    display: flex;
+    flex: 8;
+    gap: 10px;
+
+    .item {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-weight: 300;
+        font-size: 9px;
+        line-height: 10px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.04em;
+        color: #3d4247;
+      }
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #c3c9d0;
+  border-radius: 6px;
+
+  @include phone {
+    flex-direction: column;
+    padding: 10;
+
+    .iconReferences {
+      margin-top: 1rem;
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+
+    .iconReferences {
+      margin-top: 1rem;
+    }
+  }
+
+  @include desktop {
+    border-radius: 6px;
+    flex-direction: row;
+
+    .iconReferences {
+      margin-top: 0;
+    }
+  }
+}
+
+.iconReferences {
+  display: flex;
+
+  @include desktop {
+    margin-left: 1rem;
+  }
+
+  .item {
+    display: flex;
+    margin-left: 16px;
+
+    p {
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 10px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.04em;
+      color: #3d4247;
+    }
+
+    @include phone {
+      margin-left: 10px;
+    }
+  }
+
+  .icon {
+    display: flex;
+    flex: 1;
+    margin: 0 4px;
+    align-items: center;
+    justify-content: center;
+
+
+    @include phone {
+      p {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 9px;
+  padding: 16px 30px 14px 24px;
+  border-bottom: 1px solid #7e7e7e;
+  z-index: 10000;
+}

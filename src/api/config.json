@@ -1,0 +1,22 @@
+{
+  "GET_INDICATOR_CATEGORIES": "/api/GetIndicatorCategories",
+  "GET_INDICATOR_DECILES": "/api/GetInfoDeciles",
+  "GET_REGION_UNITS": "/api/GetRegionUnits",
+  "GET_REGION_INDICATOR": "/api/GetRegionIndicator",
+  "GET_REGION_DEMOGRAPHICS": "/api/GetRegionDemographics",
+  "GET_REGION_MEASUREMENTS": "/api/GetRegionMeasurements",
+  "GET_MEASUREMENTS": "/api/GetMeasurements",
+  "GET_INDICATOR_REGIONS": "/api/GetIndicatorRegions",
+  "GET_REGION_MEASUREMENTS_CHANGE": "api/GetRegionMeasurementsChange",
+  "GET_INDICATOR_CHANGES": "api/GetIndicatorChanges",
+  "GET_DISTRICTS_VILLAGES": "/api/GetDistrictsVillages",
+  "GET_HIERARCHY": "/api/GetHierarchy",
+  "GET_SHORT_URL": "/api/GetShortUrl",
+  "CREATE_SHORT_URL": "/api/CreateShortUrl",
+  "GET_INDICATORS_BETTER_THAN": "/api/GetIndicatorsBetterThan",
+  "GET_IMPROVEMENT_RANKING": "/api/GetImprovementRanking",
+  "GET_INDICATORS_AMOUNT_PER_CHANGE": "/api/GetIndicatorsAmountPerChange",
+  "GET_TOP_INDICATORS_CHANGE": "/api/GetTopIndicatorsChange",
+  "GET_INDICATORS_PER_DECILE": "/api/GetIndicatorsPerDecile",
+  "GET_TABLE_OF_INDICATORS": "/api/GetTableOfIndicators"
+}

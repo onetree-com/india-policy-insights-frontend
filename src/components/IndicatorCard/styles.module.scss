@@ -1,0 +1,162 @@
+@import "../../index.scss";
+
+.container {
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 17px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .subtitleContainer {
+        display: flex;
+        margin-top: 0.5rem;
+
+        .noData {
+            display: flex;
+            align-items: center;
+
+            &>p {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .changeIndicator {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.changeContentContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    .iconContainer {
+        flex: 1;
+    }
+
+    .percentageBar {
+        flex: 20;
+        border-radius: 2px;
+        background: #D6D6D6;
+        height: 8px;
+        display: flex;
+
+        .change {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            padding: 0;
+
+            .arrows {
+                height: 100%;
+                position: absolute;
+                bottom: 0px;
+            }
+
+            .lowerIndicator {
+                width: fit-content;
+                width: 5%;
+                align-self: center;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .higherIndicator {
+                @extend .lowerIndicator;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.currentContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+
+    .percentageIndicator {
+        flex: 1;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-end;
+
+        span {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 11px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #7e7e7e;
+        }
+    }
+
+    .percentageIndicatorWithCheck {
+        @extend .percentageIndicator;
+        align-self: unset;
+    }
+
+    .percentageBar {
+        border-radius: 2px;
+        background: #D6D6D6;
+        align-self: flex-end;
+        height: 8px;
+        flex: 20;
+
+        .valueIndicator {
+            border-radius: 6px;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .circleIndicator {
+                margin-bottom: 16px;
+                width: 1%;
+                display: flex;
+                max-width: -moz-fit-content;
+                max-width: fit-content;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: -1px;
+                align-items: center;
+            }
+        }
+
+        .stateIndicator {
+            width: 1%;
+            display: flex;
+            max-width: fit-content;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -5px;
+        }
+    }
+
+}

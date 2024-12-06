@@ -1,0 +1,31 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    display: flex;
+    width: 30%;
+    margin-left: -15%;
+    background-color: #FAE4E7;
+    border-radius: 10px;
+}
+
+.filler {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    border-radius: inherit;
+    background-color: #A51C30;
+    animation: progressLine 1.5s linear infinite;
+}
+
+@keyframes progressLine {
+
+    50% {
+        transform: translateX(400%);
+    }
+
+    100% {
+        transform: translateX(1000%);
+    }
+}

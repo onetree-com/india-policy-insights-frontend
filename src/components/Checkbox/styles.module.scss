@@ -1,0 +1,17 @@
+.checkbox {
+  display: inline-block; // set to `inline-block` as `inline elements ignore `height` and `width`
+  height: 15px;
+  width: 15px;
+  min-width: 15px;
+  min-height: 15px;
+  background: #fff;
+  border: 2px #d6d6d6 solid;
+  margin-right: 4px;
+  margin-right: 12.5px;
+  cursor: pointer;
+}
+
+.checkbox--active {
+  border-color: #383838;
+  background: #383838;
+}

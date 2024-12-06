@@ -1,0 +1,105 @@
+@import "../../index.scss";
+
+
+
+
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    box-sizing: border-box;
+
+    @include desktop {
+        background-color: white !important;
+        padding: 4px 13px 4px 4px !important;
+        flex: 0.3 !important;
+    }
+
+    @include tablet {
+        background-color: white;
+    }
+
+    @include phone {
+        background-color: white;
+    }
+
+    .PDFControls {
+        width: calc(100% - 50px);
+
+        @include phone {
+            width: 100%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            @include tablet {
+                border-top: #F5F4F4 1px solid;
+            }
+        }
+
+        .PDFDownloadLink {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 8px 20px;
+            white-space: nowrap;
+            background-color: #BC3347;
+            margin-top: 5px;
+            border: 1px solid #BC3347;
+            text-align: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 6px;
+
+            .loader {
+                position: absolute;
+                left: 50px;
+            }
+        }
+
+        .disabled {
+            cursor: not-allowed;
+            background-color: #7e7e7e;
+        }
+    }
+
+    .mobile {
+        width: 100%;
+        display: flex;
+        padding-bottom: 8px;
+        flex-direction: column;
+    }
+
+
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottomLine {
+    width: 100%;
+    border-top: 2px solid #7e7e7e;
+    background: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}

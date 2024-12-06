@@ -1,0 +1,105 @@
+@import "../../index.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  @include desktop {
+    flex: 0.48 !important;
+    height: calc(100vh - 77px) !important;
+  }
+  .data-view-section {
+    @include tablet {
+      width: 100%;
+    }
+    @include phone {
+      width: 100%;
+    }
+    display: flex;
+    box-sizing: border-box;
+    background-color: white;
+    align-items: center;
+    padding: 24.05px 12px 17.2px 12px;
+    gap: 28px;
+    @include desktop {
+      border-bottom: 2px solid #7e7e7e;
+    }
+    .data-view {
+      display: flex;
+      box-sizing: border-box;
+      flex-direction: column;
+      gap: 7.46px;
+    }
+  }
+  .indicator-section {
+    display: flex;
+    box-sizing: border-box;
+    @include desktop {
+      padding: 24px !important;
+      flex-direction: row !important;
+    }
+    background-color: white;
+    width: 100%;
+    gap: 16px;
+    border-bottom: 2px solid #7e7e7e;
+    @include tablet {
+      width: 100%;
+      padding: 16px;
+      flex-direction: column;
+    }
+    @include phone {
+      width: 100%;
+      padding: 16px;
+      flex-direction: column;
+    }
+  }
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px 9px 16px;
+    background-color: white;
+    p {
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #3d4247;
+    }
+    span {
+      font-family: "Helvetica";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      color: #5e6771;
+    }
+  }
+}
+
+.bottomLine {
+  width: 100%;
+  border-top: 2px solid #7e7e7e;
+  background: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .text {
+    font-size: 14px;
+    color: rgb(61, 66, 71);
+    text-align: start;
+    line-height: 24px;
+    font-family: Helvetica;
+    margin: 0px;
+  }
+}

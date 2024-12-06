@@ -1,0 +1,74 @@
+@import '../../index.scss';
+
+.container {
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #e7e7e7;
+    margin: 5px;
+}
+
+.header {
+    display: flex;
+    top: 0;
+    justify-content: space-between;
+    padding: 21px 34px;
+    border-bottom: 4px solid #EEEEEE;
+
+    .collapseBtn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.expandedIndicators {
+    display: flex;
+    min-height: max-content;
+    margin: 24px 18px;
+    grid-template-rows: min-content;
+
+    @include phone {
+        flex-direction: column;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        &>div {
+            flex-basis: 44% !important;
+        }
+    }
+
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+
+        &>div {
+            flex-basis: 28% !important;
+        }
+    }
+}
+
+.indicators {
+    display: grid;
+    grid-gap: 10px;
+    margin: 24px 18px;
+    grid-template-rows: auto;
+
+    @include phone {
+        grid-template-columns: 100%;
+    }
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}

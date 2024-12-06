@@ -1,0 +1,106 @@
+@import "./index.scss";
+
+p {
+  margin: 0;
+}
+.app {
+  position: relative;
+  height: 100vh;
+}
+
+.maplibregl-ctrl-zoom-in,
+.mapboxgl-ctrl-zoom-in,
+.maplibregl-ctrl-zoom-out,
+.mapboxgl-ctrl-zoom-out,
+.maplibregl-ctrl-compass,
+.mapboxgl-ctrl-compass {
+  height: 31px !important;
+  width: 40px !important;
+}
+
+.maplibregl-ctrl-zoom-in,
+.mapboxgl-ctrl-zoom-in {
+  .maplibregl-ctrl-icon,
+  .mapboxgl-ctrl-icon {
+    &:hover:before {
+      content: attr(data-tooltip);
+    }
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.87022 14.5402C6.68919 14.5402 6.53531 14.4858 6.40859 14.3769C6.29997 14.2498 6.24566 14.0955 6.24566 13.914V8.22313H0.624566C0.443532 8.22313 0.289654 8.16868 0.16293 8.05976C0.0543101 7.93269 0 7.77839 0 7.59687V6.78C0 6.59847 0.0543101 6.45325 0.16293 6.34434C0.289654 6.21727 0.443532 6.15373 0.624566 6.15373H6.24566V0.626264C6.24566 0.426586 6.29997 0.272289 6.40859 0.163373C6.53531 0.0544573 6.68919 0 6.87022 0H7.73919C7.93832 0 8.0922 0.0544573 8.20082 0.163373C8.30944 0.272289 8.36375 0.426586 8.36375 0.626264V6.15373H13.9848C14.1659 6.15373 14.3107 6.21727 14.4193 6.34434C14.546 6.45325 14.6094 6.59847 14.6094 6.78V7.59687C14.6094 7.77839 14.546 7.93269 14.4193 8.05976C14.3107 8.16868 14.1659 8.22313 13.9848 8.22313H8.36375V13.914C8.36375 14.0955 8.30039 14.2498 8.17367 14.3769C8.06505 14.4858 7.92022 14.5402 7.73919 14.5402H6.87022Z' fill='%23383838'/%3E%3C/svg%3E ") !important;
+  }
+}
+
+.lang-en .maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon,
+.lang-en .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("Zoom In");
+  }
+}
+
+.lang-hi .maplibregl-ctrl-zoom-in .maplibregl-ctrl-icon,
+.lang-hi .mapboxgl-ctrl-zoom-in .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("बड़ा करें");
+  }
+}
+
+.maplibregl-ctrl-zoom-out,
+.mapboxgl-ctrl-zoom-out {
+  .maplibregl-ctrl-icon,
+  .mapboxgl-ctrl-icon {
+    &:hover:before {
+      content: attr(data-tooltip);
+    }
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='3' viewBox='0 0 17 3' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.624566 2.20554C0.443532 2.20554 0.289654 2.15109 0.16293 2.04217C0.05431 1.93325 0 1.78803 0 1.60651V0.626265C0 0.444739 0.05431 0.299519 0.16293 0.190603C0.289654 0.0635346 0.443532 0 0.624566 0H15.5598C15.7409 0 15.8857 0.0635346 15.9943 0.190603C16.121 0.299519 16.1844 0.444739 16.1844 0.626265V1.60651C16.1844 1.78803 16.121 1.93325 15.9943 2.04217C15.8857 2.15109 15.7409 2.20554 15.5598 2.20554H0.624566Z' fill='%23383838'/%3E%3C/svg%3E ") !important;
+  }
+}
+
+.lang-en .maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon,
+.lang-en .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("Zoom Out");
+  }
+}
+
+.lang-hi .maplibregl-ctrl-zoom-out .maplibregl-ctrl-icon,
+.lang-hi .mapboxgl-ctrl-zoom-out .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("छोटा करें");
+  }
+}
+
+.maplibregl-ctrl-compass,
+.mapboxgl-ctrl-compass {
+  .maplibregl-ctrl-icon,
+  .mapboxgl-ctrl-icon {
+    &:hover:before {
+      content: attr(data-tooltip);
+    }
+    cursor: pointer !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='8.00001' cy='7.99992' r='6.66667' stroke='%237E7E7E' stroke-width='1.5'/%3E%3Cpath d='M15.5 15.5L13 13' stroke='%237E7E7E' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M6.78845 11.4095L6.66705 11.4095C5.72424 11.4095 5.25284 11.4095 4.95994 11.1166C4.66705 10.8237 4.66705 10.3523 4.66705 9.40948L4.66705 9.28809' stroke='%237E7E7E' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M9.28845 11.4095L9.40985 11.4095C10.3527 11.4095 10.8241 11.4095 11.117 11.1166C11.4099 10.8237 11.4099 10.3523 11.4099 9.40948L11.4099 9.28809' stroke='%237E7E7E' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M6.78845 4.66644L6.66705 4.66644C5.72424 4.66644 5.25284 4.66644 4.95995 4.95934C4.66705 5.25223 4.66705 5.72363 4.66705 6.66644L4.66705 6.78784' stroke='%237E7E7E' stroke-width='1.5' stroke-linejoin='round'/%3E%3Cpath d='M9.28845 4.66644L9.40985 4.66644C10.3527 4.66644 10.8241 4.66644 11.117 4.95934C11.4099 5.25223 11.4099 5.72363 11.4099 6.66644L11.4099 6.78784' stroke='%237E7E7E' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E%0A") !important;
+  }
+}
+
+
+.lang-en .maplibregl-ctrl-compass .maplibregl-ctrl-icon,
+.lang-en .mapboxgl-ctrl-compass .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("Re-center");
+  }
+}
+
+.lang-hi .maplibregl-ctrl-compass .maplibregl-ctrl-icon,
+.lang-hi .mapboxgl-ctrl-compass .mapboxgl-ctrl-icon {
+  &:hover:before {
+    @include tooltip("केंद्रित करें");
+  }
+}
+
+.maplibregl-popup-tip,
+.mapboxgl-popup-tip {
+  display: none !important;
+}
+.mapboxgl-popup-content,
+.maplibregl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+}

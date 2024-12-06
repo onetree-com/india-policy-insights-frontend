@@ -1,0 +1,14 @@
+{
+  "version": 8,
+  "sources": {},
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "layout": { "visibility": "visible" },
+      "paint": {
+        "background-color": "#eeeeee"
+      }
+    }
+  ]
+}

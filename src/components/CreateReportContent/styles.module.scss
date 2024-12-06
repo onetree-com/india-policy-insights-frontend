@@ -1,0 +1,50 @@
+@import "../../index.scss";
+
+.container {
+  overflow: hidden;
+  display: flex;
+  height: calc(100vh - 97px);
+  background-color: #e5e5e5;
+
+  @include desktop {
+    flex-direction: row !important;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include phone {
+    flex-direction: column;
+  }
+}
+
+.content {
+  flex: 0.9;
+
+  @include tablet {
+    flex: 1;
+    padding-top: 0;
+  }
+
+  @include phone {
+    overflow-y: scroll;
+    flex: 1;
+    padding-top: 0;
+  }
+}
+
+.mapGeneratorsContainer {
+  position: relative;
+}
+
+
+
+.PDFViewer {
+  width: calc(100% - 10px);
+  height: calc(100% - 5px);
+
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

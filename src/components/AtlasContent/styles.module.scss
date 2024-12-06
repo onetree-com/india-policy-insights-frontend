@@ -1,0 +1,15 @@
+@import "../../index.scss";
+
+.container {
+  height: calc(100% - 77px);
+  background-color: #f5f4f4;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  @include tablet {
+    flex-direction: column;
+  }
+  @include phone {
+    display: flex;
+    flex-direction: column;
+  }
+}

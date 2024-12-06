@@ -1,0 +1,86 @@
+{
+  "name": "india-policy-insights",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@loadable/component": "^5.15.3",
+    "@react-pdf/renderer": "^3.0.0",
+    "@react-pdf/yoga": "^3.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@turf/bbox": "^6.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/loadable__component": "^5.13.4",
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "@types/react-pdf": "^5.7.2",
+    "assert": "^2.0.0",
+    "axios": "^0.27.2",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "chart.js": "^4.3.3",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "classnames": "^2.3.1",
+    "craco-less": "^2.0.0",
+    "craco-workbox": "^0.2.0",
+    "framer-motion": "^9.0.2",
+    "html2canvas": "^1.4.1",
+    "i18next": "^23.2.8",
+    "mapbox-gl": "^2.10.0",
+    "maplibre-gl": "^2.4.0",
+    "node-sass": "^7.0.1",
+    "process": "^0.11.10",
+    "query-string": "^8.1.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-gtm-module": "^2.0.11",
+    "react-i18next": "^13.0.2",
+    "react-map-gl": "^7.0.19",
+    "react-pdf": "^7.5.0",
+    "react-router-dom": "^6.8.0",
+    "react-scripts": "5.0.1",
+    "react-select": "^5.7.4",
+    "react-toastify": "^9.1.2",
+    "stream": "^0.0.2",
+    "stream-browserify": "^3.0.0",
+    "typescript": "^4.7.4",
+    "util": "^0.12.4",
+    "web-vitals": "^2.1.4",
+    "webpack-filter-warnings-plugin": "^1.2.1"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "rules": {
+      "no-console": "warn"
+    },
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.0.0",
+    "@types/react-gtm-module": "^2.0.1",
+    "@types/react-transition-group": "^4.4.5"
+  }
+}

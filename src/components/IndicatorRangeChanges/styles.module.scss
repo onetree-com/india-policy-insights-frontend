@@ -1,0 +1,118 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    position: relative;
+    span {
+      font-weight: 300;
+      font-size: 9px;
+      line-height: 10px;
+      letter-spacing: 0.04em;
+      color: #3d4247;
+      font-family: "Helvetica";
+      font-style: normal;
+    }
+    button {
+      height: 20px;
+      width: 100%;
+      border: 0.006rem solid #ffffff;
+      position: relative;
+      cursor: pointer;
+
+      &.active {
+        border: 1.5px solid #3d4247 !important;
+        z-index: 2;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+  div:first-child {
+    button {
+      border-radius: 6px 0 0 6px;
+    }
+  }
+
+  div:last-child {
+    button {
+      border-radius: 0 6px 6px 0;
+    }
+  }
+}
+
+.barColorContainer {
+  gap: 5px;
+}
+
+.reset-filter {
+  p,
+  svg {
+    background: #f5f4f4;
+  }
+
+  p {
+    border-radius: 4px 0 0 4px;
+    padding: 1.83px 4px 1.83px 8px;
+    color: #575a5c;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    color: #575a5c;
+  }
+
+  svg {
+    border-radius: 0 4px 4px 0;
+    padding: 1.83px 8px 1.83px 1px;
+    cursor: pointer;
+  }
+
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 22.04px;
+  margin-bottom: 18px;
+}
+
+.customTooltip {
+  position: absolute;
+  text-align: center;
+  display: none;
+  background: #383838;
+  border-radius: 2px;
+  padding: 4px 10px;
+  width: 100%;
+  &.inline-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  label {
+    font-family: "Helvetica";
+    font-size: 9px;
+    line-height: 14px;
+    color: #ffffff;
+  }
+}
+
+.cutoffText {
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 10px;
+  letter-spacing: 0.04em;
+  color: #3d4247;
+  font-family: "Helvetica";
+  font-style: normal;
+}

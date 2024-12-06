@@ -1,0 +1,47 @@
+@import "../../index.scss";
+
+.container {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #7e7e7e;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  @include phone {
+    border-radius: 0;
+    border: none;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titleContainer {
+    background-color: #eeeeee;
+    padding: 7px 0px 5px 16px;
+  }
+
+  .informationContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px 0 16px;
+
+    .information {
+      display: flex;
+      background-color: #eeeeee;
+      justify-content: space-between;
+      padding: 5px 19px;
+      margin-bottom: 8px;
+      border-radius: 6px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 16px;
+  padding: 16px 30px 14px 24px;
+  border-bottom: 1px solid #7e7e7e;
+}

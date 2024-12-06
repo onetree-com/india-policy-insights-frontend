@@ -1,0 +1,84 @@
+@import "../../index.scss";
+
+.container {
+  @include desktop {
+    border: 1px solid #7e7e7e !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1) !important;
+  }
+  @include tablet {
+    border: none;
+    border-bottom: 2px solid #7e7e7e;
+    box-shadow: none;
+  }
+  @include phone {
+    border: none;
+    border-bottom: 2px solid #7e7e7e;
+    box-shadow: none;
+  }
+  background: #ffffff;
+  border-radius: 4px;
+  width: 100%;
+  padding: 24.05px 12px 17.2px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8.3px;
+}
+.btnContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  button {
+    background: #f5f4f4;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: none;
+    height: 31.06px;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  button:first-child {
+    width: 80px;
+    min-width: 80px;
+  }
+  button:nth-child(2) {
+    width: 100px;
+    min-width: 100px;
+  }
+  & .active {
+    background: #3d4247;
+    color: white;
+    box-shadow: none;
+  }
+
+  .btnHover {
+    position: relative;
+
+    .tooltipContainer {
+      visibility: hidden;
+    }
+    &:hover {
+      .tooltipContainer {
+        visibility: visible;
+      }
+    }
+  }
+}
+.text {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 9px;
+  line-height: 10px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #575a5c;
+}

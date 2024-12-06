@@ -1,0 +1,513 @@
+@import "../../index.scss";
+
+.container {
+  height: calc(100vh - 77px);
+  overflow: hidden;
+  background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  font-family: "Helvetica";
+
+  @include desktop {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .tableContainer {
+    height: 100%;
+    width: 100vw;
+    position: relative;
+
+    @include tablet {
+      overflow-x: scroll;
+    }
+
+    @include phone {
+      overflow: scroll;
+    }
+  }
+
+  .tableContent {
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  .main {
+    max-height: 88%;
+    box-sizing: border-box;
+
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+    }
+
+    .header {
+      box-sizing: border-box;
+      position: sticky;
+      top: 0;
+      // z-index: 2;
+      background: #ffffff;
+      border: 1px solid #575a5c;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      display: grid;
+      border-radius: 5px 5px 0 0;
+
+      @include desktop {
+        padding: 14px 24px;
+        width: 100% !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+      }
+
+      @include tablet {
+        padding: 10px 0;
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      @include phone {
+        padding: 10px 0;
+        width: 100%;
+        grid-template-columns: repeat(5, 121px);
+      }
+
+      tr.dataView {
+        padding: 0px 16px;
+
+        &>p {
+          margin-top: 10px;
+        }
+      }
+
+      tr.divisions {
+        display: flex;
+        flex-direction: column;
+
+        @include phone {
+          padding: 0 10px;
+        }
+
+        @include tablet {
+          padding: 0 10px;
+        }
+
+        @include desktop {
+          padding: 0px 22px;
+        }
+
+        svg {
+          cursor: pointer;
+          min-width: 22px;
+        }
+
+        .title {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          color: #a51c30;
+
+          .parent {
+            font-size: 18px;
+            line-height: 21px;
+
+            @include phone {
+              font-size: 14px;
+              font-weight: bold;
+            }
+          }
+
+          .division {
+            line-height: 16.1px;
+          }
+        }
+      }
+
+      .placeholder {
+        position: sticky;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        min-width: 121px;
+      }
+
+      tr:not(:last-child) {
+        border-right: 1px solid #c3c9d0;
+      }
+    }
+
+    tbody {
+      min-height: 90%;
+      max-height: 100%;
+
+      @include tablet {
+        overflow-y: visible;
+      }
+
+      @include phone {
+        overflow-y: visible;
+      }
+
+      @include desktop {
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+
+      tr:nth-of-type(even) {
+        @include phone {
+          background-color: #eee;
+        }
+
+        @include tablet {
+          background-color: #eee;
+        }
+
+        background-color: #fff;
+      }
+
+      tr:nth-of-type(odd) {
+        @include phone {
+          background-color: #f5f4f4;
+        }
+
+        @include tablet {
+          background-color: #f5f4f4;
+        }
+
+        background-color: #f5f4f4;
+      }
+
+      tr {
+        display: grid;
+        grid-auto-rows: 90px;
+
+        @include desktop {
+          width: 100% !important;
+          grid-template-columns: repeat(5, 1fr) !important;
+        }
+
+        @include tablet {
+          width: 100%;
+          grid-template-columns: repeat(5, 1fr);
+        }
+
+        @include phone {
+          width: 100%;
+          grid-template-columns: repeat(5, 121px);
+        }
+
+        th:not(:last-child) {
+          border-right: 1px solid #c3c9d0;
+        }
+      }
+
+      tr.indicatorSelectorRow {
+        border: 1px solid transparent;
+
+        @include tablet {
+          position: initial;
+        }
+
+        @include phone {
+          position: initial;
+        }
+      }
+
+      .indicatorSelector {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .indicatorOptions {
+        margin: 0;
+        height: 100%;
+        cursor: pointer;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 4px;
+        position: absolute;
+        right: 0;
+
+        .popupContent {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          &>div {
+            width: 91%;
+            z-index: 1;
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+
+            &> :first-child {
+              margin-right: 10px;
+            }
+
+            &:hover {
+              background-color: #eee;
+            }
+          }
+        }
+
+        @include phone {
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fff;
+          border-radius: 4px;
+          position: absolute;
+          right: 0;
+        }
+
+        @include desktop {
+          height: 100%;
+          position: initial;
+          background-color: transparent;
+          padding: 0;
+        }
+      }
+
+      .indicatorTitle {
+        display: flex;
+        align-items: center;
+
+        &>section {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          padding: 8px;
+        }
+
+        @include phone {
+          position: sticky;
+          left: 0;
+          z-index: 1;
+          width: 121px;
+          height: 87px;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+        }
+
+        @include tablet {
+          position: absolute;
+          left: 0;
+          width: 20%;
+          height: 90px;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+          overflow: hidden;
+        }
+
+        @include desktop {
+          position: initial !important;
+          width: 100% !important;
+          box-shadow: none !important;
+          overflow: visible;
+
+          &>section {
+            padding: 0;
+          }
+        }
+
+        &>section>p {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-weight: 400;
+        }
+      }
+
+      .indPercentage {
+        display: flex;
+        align-items: center;
+        margin-left: -5px;
+        font-weight: 400;
+      }
+
+      .indicatorValue {
+        padding-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 400;
+
+        @include phone {
+          padding-top: 12px;
+        }
+
+        .percentageBar {
+          width: 90%;
+        }
+
+        .changeBar {
+          width: 60%;
+        }
+
+        .changeIndicator {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 30%;
+        }
+
+        .noData {
+          display: flex;
+          align-items: center;
+
+          &>p {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.currentDataMobile {
+  padding: 0px 16px 7px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-weight: 400;
+
+  @include phone {
+    padding-top: 12px;
+  }
+
+  .dataContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .percentageBarMobile {
+      width: 46%;
+      height: 8px;
+      border-radius: 4px;
+      background-color: #d6d6d6;
+    }
+  }
+
+  .stateValue {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+
+    &>p {
+      margin: 0;
+    }
+  }
+}
+
+.changeDataMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .changeIndicatorMobile {
+    display: flex;
+    align-items: center;
+    margin-left: -7px;
+    margin-bottom: 10px;
+  }
+
+  .values {
+    display: flex;
+  }
+}
+
+.tooltipContainer {
+  position: relative;
+}
+
+.compareTooltip {
+  top: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #3d4247;
+  border-radius: 4px;
+  padding: 18px;
+  width: 328px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: white;
+  gap: 8px;
+  z-index: 1;
+  margin-top: 45px;
+}
+
+.compareTooltip-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.compareTooltip-title {
+  font-weight: 700;
+  font-family: "Arial";
+  font-style: normal;
+}
+
+.compareTooltip-paragrah {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+
+.compareTooltip-top::after {
+  content: "";
+  position: absolute;
+  top: -9%;
+  z-index: 1;
+  left: 50%;
+  transform: rotate(180deg);
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.compareTooltip-arrow {
+  position: absolute;
+  left: 48%;
+  top: -10px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  z-index: 1;
+}
+
+.compareTooltip-footer {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  gap: 5px;
+  align-items: center;
+}

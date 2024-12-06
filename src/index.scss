@@ -1,0 +1,98 @@
+$tablet-breakpoint: 576px;
+$desktop-breakpoint: 992px;
+
+@mixin phone {
+  @media (max-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tooltip($text) {
+  color: #ffffff;
+  content: ($text);
+  position: absolute;
+  left: -82px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 11px;
+  background: rgba(46, 45, 45, 0.85);
+  border-radius: 4px;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("fonts/Helvetica.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Helvetica-Bold";
+  src: url("fonts/Helvetica-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Noto Sans Devanagari', 'sans-serif';
+  src: url("fonts/NotoSans-Black.ttf") format("truetype");
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+@mixin progressbar {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+}
